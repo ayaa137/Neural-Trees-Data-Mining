@@ -230,7 +230,7 @@ Overall, Neural Trees provide an interesting combination of neural-network optim
 ## 👩‍💻 Authors
 
 **Aya Abdine**  
-**Meriam El Askri**
+**Meriam El Askri — Contributor**
 
 MSc Data Science for Society and Business  
 Constructor University, Bremen, Germany
