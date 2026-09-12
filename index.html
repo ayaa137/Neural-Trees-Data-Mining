@@ -9,6 +9,10 @@
 
   <style>
 
+    /* =========================================================
+       GENERAL
+    ========================================================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -23,123 +27,176 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
       color: #172033;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .container {
-      width: 88%;
-      max-width: 1180px;
+      width: 90%;
+      max-width: 1100px;
       margin: auto;
     }
 
+    section {
+      margin-bottom: 105px;
+    }
 
-    /* ---------------- NAVIGATION ---------------- */
+    .section-label {
+      color: #0f766e;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      line-height: 1.2;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      max-width: 920px;
+      color: #5b6473;
+      font-size: 16px;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
 
     nav {
+      background: #ffffff;
       border-bottom: 1px solid #e7e9ee;
-      background: white;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
     .nav-content {
+      min-height: 72px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      justify-content: space-between;
     }
 
     .logo {
-      font-size: 20px;
-      font-weight: 700;
-      color: #15803d;
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .logo span {
+      color: #0f766e;
     }
 
     .nav-links {
       display: flex;
-      gap: 30px;
+      align-items: center;
+      gap: 26px;
     }
 
     .nav-links a {
       text-decoration: none;
-      color: #172033;
-      font-weight: 600;
-      transition: 0.2s;
+      color: #111827;
+      font-size: 14px;
+      font-weight: 700;
     }
 
     .nav-links a:hover {
-      color: #16a34a;
+      color: #0f766e;
     }
 
 
-    /* ---------------- HERO ---------------- */
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
-      padding: 95px 0 70px;
       text-align: center;
+      padding: 90px 0 65px;
+      margin-bottom: 45px;
     }
 
-    .badge {
-      display: inline-block;
-      background: #ecfdf3;
-      color: #15803d;
-      padding: 9px 18px;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 25px;
+    .hero-label {
+      color: #0f766e;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
       font-size: 58px;
       line-height: 1.1;
-      max-width: 950px;
-      margin: auto;
       color: #111827;
+      max-width: 900px;
+      margin: auto;
     }
 
     .hero h1 span {
-      color: #16a34a;
+      color: #0f766e;
     }
 
-    .hero p {
+    .hero-description {
       max-width: 850px;
-      margin: 28px auto 0;
-      font-size: 20px;
-      color: #64748b;
+      margin: 26px auto 0;
+      font-size: 19px;
+      color: #667085;
+    }
+
+    .authors {
+      margin-top: 24px;
+      color: #475569;
+      font-size: 16px;
+    }
+
+    .authors strong {
+      color: #111827;
+    }
+
+    .authors small {
+      display: block;
+      margin-top: 3px;
+      color: #7c8594;
+      font-size: 13px;
     }
 
     .hero-buttons {
-      margin-top: 35px;
+      margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
+      padding: 13px 23px;
       border-radius: 9px;
+      font-size: 14px;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: bold;
       transition: 0.2s;
     }
 
     .btn-primary {
-      background: #16a34a;
       color: white;
+      background: #0f766e;
+      border: 1px solid #0f766e;
     }
 
     .btn-primary:hover {
-      background: #15803d;
+      background: #115e59;
     }
 
     .btn-secondary {
-      border: 1px solid #d1d5db;
-      color: #172033;
+      color: #111827;
       background: white;
+      border: 1px solid #cfd4dc;
     }
 
     .btn-secondary:hover {
@@ -147,289 +204,456 @@
     }
 
 
-    /* ---------------- STATS ---------------- */
+    /* =========================================================
+       HEADLINE STATS
+    ========================================================= */
 
     .stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      margin-bottom: 95px;
+      margin-bottom: 105px;
     }
 
     .stat-card {
-      padding: 30px 20px;
-      border: 1px solid #e8eaee;
-      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 33px 18px;
       text-align: center;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 7px 24px rgba(15, 23, 42, 0.06);
     }
 
     .stat-card h2 {
-      font-size: 35px;
-      color: #16a34a;
-      margin-bottom: 5px;
+      color: #0f766e;
+      font-size: 32px;
+      margin-bottom: 8px;
     }
 
     .stat-card p {
-      font-size: 14px;
-      color: #64748b;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 700;
+      color: #394150;
     }
 
 
-    /* ---------------- GENERAL SECTIONS ---------------- */
+    /* =========================================================
+       RESEARCH QUESTION
+    ========================================================= */
 
-    section {
-      margin-bottom: 95px;
-    }
-
-    .section-label {
-      color: #16a34a;
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: 38px;
-      margin-bottom: 22px;
-      color: #111827;
-    }
-
-    .section-text {
-      font-size: 17px;
-      color: #4b5563;
-      max-width: 1000px;
-    }
-
-
-    /* ---------------- OVERVIEW ---------------- */
-
-    .overview-box {
-      background: #f8fafc;
-      border-radius: 18px;
-      padding: 35px;
-      border-left: 5px solid #16a34a;
+    .research-box {
       margin-top: 30px;
+      border-left: 5px solid #0f766e;
+      padding: 25px 30px;
+      background: #fafafa;
     }
 
-    .overview-box p {
-      color: #4b5563;
-      font-size: 17px;
-      margin-bottom: 15px;
-    }
-
-    .overview-box p:last-child {
-      margin-bottom: 0;
-    }
-
-
-    /* ---------------- APPROACHES ---------------- */
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 35px;
-    }
-
-    .approach-card {
-      border: 1px solid #e5e7eb;
-      padding: 28px;
-      border-radius: 16px;
-      transition: 0.2s;
-    }
-
-    .approach-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .approach-icon {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-
-    .approach-card h3 {
-      font-size: 20px;
+    .research-box h3 {
+      font-size: 16px;
       margin-bottom: 10px;
     }
 
-    .approach-card p {
-      color: #64748b;
-      font-size: 15px;
+    .research-box p {
+      color: #505968;
+      font-size: 16px;
+      max-width: 900px;
     }
 
 
-    /* ---------------- DATASETS ---------------- */
+    /* =========================================================
+       DATASETS
+    ========================================================= */
 
     .dataset-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 35px;
     }
 
     .dataset-card {
-      background: #f8fafc;
-      border: 1px solid #e8eaee;
-      padding: 23px;
-      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .dataset-icon {
+      font-size: 25px;
+      margin-bottom: 12px;
     }
 
     .dataset-card h3 {
-      font-size: 17px;
+      font-size: 18px;
       margin-bottom: 8px;
+      color: #111827;
     }
 
-    .dataset-card span {
-      font-size: 13px;
-      background: #dcfce7;
-      color: #15803d;
-      padding: 5px 10px;
+    .dataset-card p {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .dataset-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #ecfdf5;
+      color: #047857;
       border-radius: 20px;
-      font-weight: bold;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
     }
 
-    .regression span {
+    .tag-regression {
       background: #eef2ff;
       color: #4f46e5;
     }
 
 
-    /* ---------------- RESULTS ---------------- */
+    /* =========================================================
+       METHODOLOGY
+    ========================================================= */
 
-    .results-grid {
+    .method-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
+      gap: 20px;
+      margin-top: 34px;
+    }
+
+    .method-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 17px;
+      padding: 28px;
+    }
+
+    .method-card .icon {
+      font-size: 25px;
+      margin-bottom: 13px;
+    }
+
+    .method-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .method-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .formula-box {
+      margin-top: 30px;
+      padding: 30px;
+      text-align: center;
+      background: #f8fafc;
+      border-radius: 16px;
+      color: #475569;
+    }
+
+    .formula-box h3 {
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .formula {
+      color: #0f766e;
+      font-family: "Courier New", monospace;
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+
+    /* =========================================================
+       MODELS
+    ========================================================= */
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .model-card {
+      padding: 27px;
+      border-radius: 17px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .model-card h3 {
+      margin: 12px 0 8px;
+      font-size: 17px;
+    }
+
+    .model-card p {
+      font-size: 14px;
+      color: #667085;
+    }
+
+
+    /* =========================================================
+       RESULTS
+    ========================================================= */
+
+    .result-list {
+      display: grid;
+      gap: 18px;
       margin-top: 35px;
     }
 
     .result-card {
-      border-radius: 18px;
-      padding: 35px;
       border: 1px solid #e5e7eb;
-    }
-
-    .result-card h3 {
-      color: #16a34a;
-      margin-bottom: 15px;
-      font-size: 22px;
+      border-radius: 17px;
+      padding: 28px 30px;
     }
 
     .result-number {
-      font-size: 42px;
-      font-weight: bold;
-      color: #111827;
-      margin: 10px 0;
+      color: #0f766e;
+      font-size: 29px;
+      font-weight: 800;
+      margin-bottom: 3px;
+    }
+
+    .result-card h3 {
+      font-size: 18px;
+      margin-bottom: 7px;
     }
 
     .result-card p {
-      color: #64748b;
+      font-size: 14px;
+      color: #667085;
+    }
+
+    .result-card strong {
+      color: #111827;
     }
 
 
-    /* ---------------- FINDINGS ---------------- */
+    /* =========================================================
+       RESULTS TABLE
+    ========================================================= */
 
-    .findings-grid {
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 32px;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 750px;
+    }
+
+    th {
+      text-align: left;
+      background: #f8fafc;
+      color: #111827;
+      font-size: 13px;
+      padding: 17px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    td {
+      font-size: 13px;
+      color: #566070;
+      padding: 17px;
+      border-bottom: 1px solid #edf0f3;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td strong {
+      color: #0f766e;
+    }
+
+
+    /* =========================================================
+       NEURAL TREE RESULTS
+    ========================================================= */
+
+    .neural-results {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
       margin-top: 35px;
     }
 
-    .finding-card {
-      padding: 30px;
-      border-radius: 16px;
-      background: #f8fafc;
+    .neural-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 17px;
+      padding: 27px;
     }
 
-    .finding-card h3 {
-      margin-bottom: 12px;
-      color: #15803d;
-    }
-
-    .finding-card p {
-      font-size: 15px;
-      color: #4b5563;
-    }
-
-
-    /* ---------------- COMPARISON ---------------- */
-
-    .comparison {
-      background: #111827;
-      color: white;
-      border-radius: 22px;
-      padding: 45px;
-    }
-
-    .comparison h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
-
-    .comparison p {
-      color: #d1d5db;
+    .neural-card h3 {
       font-size: 17px;
-      margin-bottom: 15px;
+      margin-bottom: 7px;
     }
 
-    .comparison strong {
-      color: #4ade80;
+    .neural-value {
+      color: #0f766e;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .neural-card p {
+      color: #667085;
+      font-size: 14px;
     }
 
 
-    /* ---------------- TECHNOLOGIES ---------------- */
+    /* =========================================================
+       INTERPRETABILITY
+    ========================================================= */
+
+    .interpret-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .interpret-card {
+      background: #f8fafc;
+      padding: 28px;
+      border-radius: 17px;
+    }
+
+    .interpret-card h3 {
+      color: #0f766e;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .interpret-card p {
+      color: #5d6675;
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       FINDINGS
+    ========================================================= */
+
+    .finding-list {
+      margin-top: 35px;
+    }
+
+    .finding {
+      padding: 24px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .finding:last-child {
+      border-bottom: none;
+    }
+
+    .finding h3 {
+      font-size: 17px;
+      color: #0f766e;
+      margin-bottom: 6px;
+    }
+
+    .finding p {
+      color: #667085;
+      font-size: 14px;
+      max-width: 950px;
+    }
+
+
+    /* =========================================================
+       LIMITATIONS
+    ========================================================= */
+
+    .limitation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .limitation-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 17px;
+      padding: 27px;
+    }
+
+    .limitation-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .limitation-card p {
+      font-size: 14px;
+      color: #667085;
+    }
+
+
+    /* =========================================================
+       TECHNOLOGY
+    ========================================================= */
 
     .tech-list {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 25px;
+      margin-top: 28px;
     }
 
     .tech {
-      padding: 10px 17px;
-      border: 1px solid #d1d5db;
+      padding: 9px 17px;
       border-radius: 30px;
-      font-size: 14px;
-      font-weight: 600;
+      border: 1px solid #d7dce3;
+      font-size: 13px;
+      font-weight: 700;
+      color: #374151;
     }
 
 
-    /* ---------------- PROJECT LINKS ---------------- */
+    /* =========================================================
+       PROJECT CTA
+    ========================================================= */
 
-    .project-links {
+    .project-cta {
       text-align: center;
-      background: #f0fdf4;
-      padding: 60px 30px;
+      padding: 65px 30px;
       border-radius: 22px;
+      background: #f8fafc;
     }
 
-    .project-links h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
+    .project-cta h2 {
+      font-size: 34px;
+      margin-bottom: 14px;
     }
 
-    .project-links p {
-      color: #64748b;
-      max-width: 700px;
-      margin: auto auto 30px;
+    .project-cta p {
+      max-width: 750px;
+      margin: auto;
+      color: #667085;
     }
 
 
-    /* ---------------- FOOTER ---------------- */
+    /* =========================================================
+       FOOTER
+    ========================================================= */
 
     footer {
-      border-top: 1px solid #e5e7eb;
+      margin-top: 80px;
       padding: 35px 0;
+      border-top: 1px solid #e5e7eb;
       text-align: center;
-      color: #64748b;
-      font-size: 14px;
+      color: #667085;
+      font-size: 13px;
     }
 
     footer strong {
@@ -437,31 +661,39 @@
     }
 
 
-    /* ---------------- MOBILE ---------------- */
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
 
     @media (max-width: 900px) {
 
-      .stats,
-      .approach-grid,
-      .dataset-grid,
-      .findings-grid {
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .model-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .hero h1 {
-        font-size: 44px;
+        font-size: 46px;
       }
 
     }
 
+
     @media (max-width: 650px) {
 
-      .stats,
-      .approach-grid,
-      .dataset-grid,
-      .results-grid,
-      .findings-grid {
-        grid-template-columns: 1fr;
+      .nav-content {
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .hero {
@@ -472,19 +704,22 @@
         font-size: 37px;
       }
 
-      .hero p {
+      .hero-description {
         font-size: 17px;
       }
 
-      .nav-content {
-        flex-direction: column;
-        gap: 15px;
+      .stats,
+      .dataset-grid,
+      .method-grid,
+      .model-grid,
+      .neural-results,
+      .interpret-grid,
+      .limitation-grid {
+        grid-template-columns: 1fr;
       }
 
-      .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+      .section-title {
+        font-size: 30px;
       }
 
     }
@@ -496,72 +731,87 @@
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <nav>
+
   <div class="container nav-content">
 
     <div class="logo">
-      🌳 Neural Trees
+      🌳 <span>Neural Trees</span>
     </div>
 
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Neural_Trees.html">Full Analysis</a>
+      <a href="#home">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#results">Results</a>
       <a href="Neural_Trees.ipynb">Notebook</a>
-      <a href="https://github.com/ayaa137/Neural-Trees-Data-Mining" target="_blank">
+
+      <a
+        href="https://github.com/ayaa137/Neural-Trees-Data-Mining"
+        target="_blank">
         GitHub
       </a>
     </div>
 
   </div>
+
 </nav>
 
 
 <main class="container">
 
 
-<!-- HERO -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-<section class="hero">
+<section class="hero" id="home">
 
-  <div class="badge">
-    Data Mining · Machine Learning · Neural Trees
+  <div class="hero-label">
+    Data Mining · Machine Learning · Differentiable Trees
   </div>
 
   <h1>
-    Exploring <span>Neural Trees</span> for
-    Tabular Machine Learning
+    Neural Trees:
+    <span>Data Mining Project</span>
   </h1>
 
-<p>
-  An implementation and evaluation of differentiable Neural Trees,
-  Joint Neural Boosting, and Greedy Neural Boosting across classification
-  and regression tasks, compared with established machine learning models.
-</p>
+  <p class="hero-description">
+    An implementation and evaluation of differentiable Neural Trees,
+    Joint Neural Boosting, and Greedy Neural Boosting across multiple
+    classification and regression datasets, compared with established
+    machine learning models.
+  </p>
 
-<div style="margin-top: 22px; font-size: 17px; color: #475569;">
-  Developed by
-  <strong style="color: #111827;">Aya Abdine</strong>
-  &
-  <strong style="color: #111827;">Meriam El Askri</strong>
-  <br>
-  <span style="font-size: 14px; color: #64748b;">
-    MSc Data Science for Society and Business · Constructor University
-  </span>
-</div>
+  <div class="authors">
+
+    Developed by
+    <strong>Aya Abdine</strong>
+    &
+    <strong>Meriam El Askri</strong>
+
+    <small>
+      MSc Data Science for Society and Business · Constructor University
+    </small>
+
+  </div>
 
   <div class="hero-buttons">
 
-    <a class="btn btn-primary"
-       href="Neural_Trees.html">
-       View Full Analysis
+    <a
+      class="btn btn-primary"
+      href="Neural_Trees.ipynb">
+      Open Notebook
     </a>
 
-    <a class="btn btn-secondary"
-       href="https://github.com/ayaa137/Neural-Trees-Data-Mining"
-       target="_blank">
-       View GitHub Repository
+    <a
+      class="btn btn-secondary"
+      href="https://github.com/ayaa137/Neural-Trees-Data-Mining"
+      target="_blank">
+      View GitHub Repository
     </a>
 
   </div>
@@ -569,7 +819,9 @@
 </section>
 
 
-<!-- PROJECT STATS -->
+<!-- =========================================================
+     STATS
+========================================================= -->
 
 <div class="stats">
 
@@ -596,42 +848,38 @@
 </div>
 
 
-<!-- PROJECT OVERVIEW -->
+<!-- =========================================================
+     PROJECT OVERVIEW
+========================================================= -->
 
-<section>
+<section id="overview">
 
-  <div class="section-label">About the Project</div>
+  <div class="section-label">
+    About the Project
+  </div>
 
   <h2 class="section-title">
     Project Overview
   </h2>
 
-  <p class="section-text">
-    Neural Trees combine the hierarchical decision-making structure of
-    decision trees with differentiable neural-network optimization.
-    Instead of using hard binary decisions at each node, Neural Trees use
-    soft probabilistic splits that can be optimized using gradient descent.
+  <p class="section-intro">
+    Traditional decision trees are easy to interpret but rely on discrete
+    split decisions. Neural networks are highly flexible but often provide
+    less transparent decision structures. Neural Trees attempt to combine
+    advantages from both approaches by replacing hard tree splits with
+    differentiable soft-routing decisions that can be optimized using
+    gradient descent.
   </p>
 
-  <div class="overview-box">
+  <div class="research-box">
+
+    <h3>Research Question</h3>
 
     <p>
-      This project investigates whether Neural Trees can provide competitive
-      performance on structured tabular datasets while preserving a more
-      interpretable tree-based architecture.
-    </p>
-
-    <p>
-      Three Neural Tree approaches were evaluated:
-      <strong>Single Neural Tree</strong>,
-      <strong>Joint Neural Boosting</strong>, and
-      <strong>Greedy Neural Boosting</strong>.
-    </p>
-
-    <p>
-      Their performance was compared with established baselines including
-      Logistic or Linear Regression, Random Forest, and Gradient Boosting.
-      The study covers both classification and regression tasks.
+      How effectively can differentiable Neural Trees and Neural Tree
+      boosting approaches perform across different classification and
+      regression datasets, and how do they compare with established
+      machine learning models for tabular data?
     </p>
 
   </div>
@@ -639,116 +887,153 @@
 </section>
 
 
-<!-- NEURAL TREE APPROACHES -->
+<!-- =========================================================
+     DATASETS
+========================================================= -->
 
 <section>
 
-  <div class="section-label">Methodology</div>
-
-  <h2 class="section-title">
-    Neural Tree Approaches
-  </h2>
-
-  <div class="approach-grid">
-
-    <div class="approach-card">
-
-      <div class="approach-icon">🌳</div>
-
-      <h3>Single Neural Tree</h3>
-
-      <p>
-        A differentiable decision-tree model using soft split functions
-        and trainable leaf predictions optimized through gradient descent.
-      </p>
-
-    </div>
-
-
-    <div class="approach-card">
-
-      <div class="approach-icon">🔗</div>
-
-      <h3>Joint Neural Boosting</h3>
-
-      <p>
-        Multiple Neural Trees are trained jointly, allowing the ensemble
-        to optimize its predictions together as one differentiable model.
-      </p>
-
-    </div>
-
-
-    <div class="approach-card">
-
-      <div class="approach-icon">🚀</div>
-
-      <h3>Greedy Neural Boosting</h3>
-
-      <p>
-        Neural Trees are added sequentially so that each new tree focuses
-        on correcting prediction errors made by the existing ensemble.
-      </p>
-
-    </div>
-
+  <div class="section-label">
+    Experimental Data
   </div>
 
-</section>
-
-
-<!-- DATASETS -->
-
-<section>
-
-  <div class="section-label">Experimental Data</div>
-
   <h2 class="section-title">
-    Six Datasets
+    Six Diverse Datasets
   </h2>
 
-  <p class="section-text">
-    The models were evaluated on datasets with different sizes, feature
-    structures, targets, and learning tasks to provide a broader comparison
-    of Neural Tree performance.
+  <p class="section-intro">
+    The project evaluates Neural Trees across six datasets representing
+    both classification and regression problems with different sample
+    sizes, feature dimensions, and prediction objectives.
   </p>
+
 
   <div class="dataset-grid">
 
 
     <div class="dataset-card">
+
+      <div class="dataset-icon">🌸</div>
+
       <h3>Iris</h3>
-      <span>Classification</span>
+
+      <p>
+        Multiclass flower classification based on sepal and petal
+        measurements.
+      </p>
+
+      <div class="dataset-meta">
+        <span class="tag">Classification</span>
+        <span class="tag">120 Train</span>
+        <span class="tag">30 Test</span>
+        <span class="tag">4 Features</span>
+      </div>
+
     </div>
 
 
     <div class="dataset-card">
-      <h3>Adult Income</h3>
-      <span>Classification</span>
-    </div>
 
+      <div class="dataset-icon">🍷</div>
 
-    <div class="dataset-card">
-      <h3>Bank Marketing</h3>
-      <span>Classification</span>
-    </div>
-
-
-    <div class="dataset-card">
-      <h3>Breast Cancer WDBC</h3>
-      <span>Classification</span>
-    </div>
-
-
-    <div class="dataset-card regression">
       <h3>Wine Quality</h3>
-      <span>Regression</span>
+
+      <p>
+        Regression task predicting wine quality from physicochemical
+        measurements.
+      </p>
+
+      <div class="dataset-meta">
+        <span class="tag tag-regression">Regression</span>
+        <span class="tag tag-regression">960 Train</span>
+        <span class="tag tag-regression">240 Test</span>
+        <span class="tag tag-regression">13 Features</span>
+      </div>
+
     </div>
 
 
-    <div class="dataset-card regression">
+    <div class="dataset-card">
+
+      <div class="dataset-icon">🎓</div>
+
       <h3>Student Performance</h3>
-      <span>Regression</span>
+
+      <p>
+        Regression problem predicting student academic performance from
+        demographic and educational variables.
+      </p>
+
+      <div class="dataset-meta">
+        <span class="tag tag-regression">Regression</span>
+        <span class="tag tag-regression">316 Train</span>
+        <span class="tag tag-regression">79 Test</span>
+        <span class="tag tag-regression">58 Features</span>
+      </div>
+
+    </div>
+
+
+    <div class="dataset-card">
+
+      <div class="dataset-icon">💼</div>
+
+      <h3>Adult Income</h3>
+
+      <p>
+        Binary classification of whether an individual's annual income
+        exceeds the dataset threshold.
+      </p>
+
+      <div class="dataset-meta">
+        <span class="tag">Classification</span>
+        <span class="tag">960 Train</span>
+        <span class="tag">240 Test</span>
+        <span class="tag">91 Features</span>
+      </div>
+
+    </div>
+
+
+    <div class="dataset-card">
+
+      <div class="dataset-icon">📞</div>
+
+      <h3>Bank Marketing</h3>
+
+      <p>
+        Binary classification of customer response to a bank marketing
+        campaign.
+      </p>
+
+      <div class="dataset-meta">
+        <span class="tag">Classification</span>
+        <span class="tag">960 Train</span>
+        <span class="tag">240 Test</span>
+        <span class="tag">51 Features</span>
+      </div>
+
+    </div>
+
+
+    <div class="dataset-card">
+
+      <div class="dataset-icon">🧬</div>
+
+      <h3>Breast Cancer WDBC</h3>
+
+      <p>
+        Classification of breast tumors using diagnostic cell-nucleus
+        measurements.
+      </p>
+
+      <div class="dataset-meta">
+        <span class="tag">Classification</span>
+        <span class="tag">455 Train</span>
+        <span class="tag">114 Test</span>
+        <span class="tag">30 Features</span>
+      </div>
+
     </div>
 
 
@@ -757,33 +1042,243 @@
 </section>
 
 
-<!-- RESULTS -->
+<!-- =========================================================
+     METHODOLOGY
+========================================================= -->
 
 <section>
 
-  <div class="section-label">Performance</div>
+  <div class="section-label">
+    Methodology
+  </div>
 
   <h2 class="section-title">
-    Best Results
+    Analysis Approach
   </h2>
 
 
-  <div class="results-grid">
+  <div class="method-grid">
+
+
+    <div class="method-card">
+
+      <div class="icon">🧹</div>
+
+      <h3>Data Preparation</h3>
+
+      <p>
+        Each dataset was cleaned, encoded, split into training and test
+        sets, and transformed into a suitable numerical representation.
+        Continuous inputs were standardized where appropriate.
+      </p>
+
+    </div>
+
+
+    <div class="method-card">
+
+      <div class="icon">🌳</div>
+
+      <h3>Differentiable Neural Trees</h3>
+
+      <p>
+        Hard binary decision nodes were replaced with trainable sigmoid
+        split functions, enabling routing probabilities and leaf values to
+        be optimized using gradient descent.
+      </p>
+
+    </div>
+
+
+    <div class="method-card">
+
+      <div class="icon">🚀</div>
+
+      <h3>Boosting Strategies</h3>
+
+      <p>
+        Joint and Greedy Neural Boosting were implemented to evaluate
+        whether combining multiple Neural Trees improves performance over
+        a single differentiable tree.
+      </p>
+
+    </div>
+
+
+    <div class="method-card">
+
+      <div class="icon">📊</div>
+
+      <h3>Model Evaluation</h3>
+
+      <p>
+        Classification models were evaluated using accuracy and weighted
+        F1 score. Regression models were evaluated using MSE, RMSE,
+        and R².
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="formula-box">
+
+    <h3>Soft Split Function</h3>
+
+    <div class="formula">
+      s(x) = sigmoid(w · x + b)
+    </div>
+
+    <p>
+      Each internal node produces a probability rather than a hard left
+      or right decision. Leaf probabilities are obtained from the product
+      of routing probabilities along each tree path.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     MODELS
+========================================================= -->
+
+<section>
+
+  <div class="section-label">
+    Experimental Models
+  </div>
+
+  <h2 class="section-title">
+    Six Model Types Compared
+  </h2>
+
+
+  <div class="model-grid">
+
+
+    <div class="model-card">
+
+      <div>🌳</div>
+
+      <h3>Single Neural Tree</h3>
+
+      <p>
+        One differentiable tree with trainable split parameters and leaf
+        predictions.
+      </p>
+
+    </div>
+
+
+    <div class="model-card">
+
+      <div>🔗</div>
+
+      <h3>Joint Neural Boosting</h3>
+
+      <p>
+        Multiple Neural Trees optimized jointly as one differentiable
+        ensemble.
+      </p>
+
+    </div>
+
+
+    <div class="model-card">
+
+      <div>🚀</div>
+
+      <h3>Greedy Neural Boosting</h3>
+
+      <p>
+        Trees are added sequentially so later trees can improve weaker
+        ensemble predictions.
+      </p>
+
+    </div>
+
+
+    <div class="model-card">
+
+      <div>📈</div>
+
+      <h3>Linear / Logistic Regression</h3>
+
+      <p>
+        Linear baseline models used for regression and classification
+        comparisons.
+      </p>
+
+    </div>
+
+
+    <div class="model-card">
+
+      <div>🌲</div>
+
+      <h3>Random Forest</h3>
+
+      <p>
+        A strong tree-ensemble baseline for nonlinear tabular prediction.
+      </p>
+
+    </div>
+
+
+    <div class="model-card">
+
+      <div>⚡</div>
+
+      <h3>Gradient Boosting</h3>
+
+      <p>
+        Sequential boosted trees providing a strong benchmark across the
+        evaluated datasets.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     MAIN RESULTS
+========================================================= -->
+
+<section id="results">
+
+  <div class="section-label">
+    Statistical Results
+  </div>
+
+  <h2 class="section-title">
+    Main Results
+  </h2>
+
+
+  <div class="result-list">
 
 
     <div class="result-card">
-
-      <h3>Best Classification Performance</h3>
 
       <div class="result-number">
         96.67%
       </div>
 
+      <h3>
+        Best Iris Classification Accuracy
+      </h3>
+
       <p>
-        The strongest classification performance was achieved on the Iris
-        dataset by Random Forest and Gradient Boosting.
-        Breast Cancer WDBC also reached approximately 96.49% accuracy with
-        Logistic Regression, Random Forest, and Gradient Boosting.
+        Random Forest and Gradient Boosting achieved the strongest Iris
+        performance with approximately <strong>96.67% accuracy</strong>.
       </p>
 
     </div>
@@ -791,17 +1286,75 @@
 
     <div class="result-card">
 
-      <h3>Best Regression Performance</h3>
+      <div class="result-number">
+        89.58%
+      </div>
+
+      <h3>
+        Best Bank Marketing Accuracy
+      </h3>
+
+      <p>
+        Gradient Boosting achieved the strongest Bank Marketing result with
+        <strong>89.58% accuracy</strong> and a weighted F1 score of
+        approximately <strong>0.8823</strong>.
+      </p>
+
+    </div>
+
+
+    <div class="result-card">
+
+      <div class="result-number">
+        96.49%
+      </div>
+
+      <h3>
+        Best Breast Cancer Accuracy
+      </h3>
+
+      <p>
+        Logistic Regression, Random Forest, and Gradient Boosting all
+        achieved approximately <strong>96.49% accuracy</strong> on the
+        Breast Cancer WDBC dataset.
+      </p>
+
+    </div>
+
+
+    <div class="result-card">
 
       <div class="result-number">
         R² = 0.8068
       </div>
 
+      <h3>
+        Best Student Performance Regression
+      </h3>
+
       <p>
-        Gradient Boosting produced the strongest Student Performance
-        regression result with an RMSE of approximately 1.99.
-        Classical models remained stronger than the Neural Tree approaches
-        on the regression datasets.
+        Gradient Boosting produced the strongest Student Performance model,
+        reaching approximately <strong>RMSE = 1.9906</strong> and
+        <strong>R² = 0.8068</strong>.
+      </p>
+
+    </div>
+
+
+    <div class="result-card">
+
+      <div class="result-number">
+        RMSE = 0.6578
+      </div>
+
+      <h3>
+        Best Wine Quality Regression
+      </h3>
+
+      <p>
+        Linear Regression achieved the strongest Wine Quality result with
+        approximately <strong>RMSE = 0.6578</strong> and
+        <strong>R² = 0.2983</strong>.
       </p>
 
     </div>
@@ -812,54 +1365,336 @@
 </section>
 
 
-<!-- MAIN FINDINGS -->
+<!-- =========================================================
+     BEST MODEL TABLE
+========================================================= -->
 
 <section>
 
-  <div class="section-label">Insights</div>
+  <div class="section-label">
+    Model Comparison
+  </div>
+
+  <h2 class="section-title">
+    Best Model by Dataset
+  </h2>
+
+  <p class="section-intro">
+    Classical models remained strong practical benchmarks across the
+    datasets, although the best-performing model depended on the task.
+  </p>
+
+
+  <div class="table-wrapper">
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>Dataset</th>
+          <th>Task</th>
+          <th>Best Model</th>
+          <th>Primary Result</th>
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+        <tr>
+          <td>Iris</td>
+          <td>Classification</td>
+          <td>Random Forest / Gradient Boosting</td>
+          <td><strong>Accuracy 0.9667</strong></td>
+        </tr>
+
+        <tr>
+          <td>Adult Income</td>
+          <td>Classification</td>
+          <td>Gradient Boosting</td>
+          <td><strong>Accuracy 0.8667</strong></td>
+        </tr>
+
+        <tr>
+          <td>Bank Marketing</td>
+          <td>Classification</td>
+          <td>Gradient Boosting</td>
+          <td><strong>Accuracy 0.8958</strong></td>
+        </tr>
+
+        <tr>
+          <td>Breast Cancer WDBC</td>
+          <td>Classification</td>
+          <td>Logistic Regression</td>
+          <td><strong>Accuracy 0.9649</strong></td>
+        </tr>
+
+        <tr>
+          <td>Student Performance</td>
+          <td>Regression</td>
+          <td>Gradient Boosting</td>
+          <td><strong>R² 0.8068</strong></td>
+        </tr>
+
+        <tr>
+          <td>Wine Quality</td>
+          <td>Regression</td>
+          <td>Linear Regression</td>
+          <td><strong>R² 0.2983</strong></td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEURAL TREE PERFORMANCE
+========================================================= -->
+
+<section>
+
+  <div class="section-label">
+    Neural Tree Performance
+  </div>
+
+  <h2 class="section-title">
+    What Did Boosting Improve?
+  </h2>
+
+  <p class="section-intro">
+    The boosted Neural Tree variants frequently improved over the Single
+    Neural Tree, although the amount of improvement varied across datasets.
+  </p>
+
+
+  <div class="neural-results">
+
+
+    <div class="neural-card">
+
+      <h3>Iris</h3>
+
+      <div class="neural-value">
+        83.33%
+      </div>
+
+      <p>
+        Greedy Neural Boosting improved over the Single Neural Tree,
+        increasing accuracy from approximately 66.67% to 83.33%.
+      </p>
+
+    </div>
+
+
+    <div class="neural-card">
+
+      <h3>Breast Cancer WDBC</h3>
+
+      <div class="neural-value">
+        89.47%
+      </div>
+
+      <p>
+        Joint Neural Boosting achieved the strongest Neural Tree result,
+        improving substantially over the Single Neural Tree.
+      </p>
+
+    </div>
+
+
+    <div class="neural-card">
+
+      <h3>Wine Quality</h3>
+
+      <div class="neural-value">
+        R² = 0.1553
+      </div>
+
+      <p>
+        Greedy Neural Boosting produced the strongest Neural Tree
+        regression result on Wine Quality, improving over the single tree.
+      </p>
+
+    </div>
+
+
+    <div class="neural-card">
+
+      <h3>Student Performance</h3>
+
+      <div class="neural-value">
+        R² = 0.0953
+      </div>
+
+      <p>
+        Greedy Neural Boosting improved the Neural Tree regression result,
+        but classical ensemble models remained considerably stronger.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTERPRETABILITY
+========================================================= -->
+
+<section>
+
+  <div class="section-label">
+    Explainability
+  </div>
+
+  <h2 class="section-title">
+    Interpreting Neural Trees
+  </h2>
+
+  <p class="section-intro">
+    Neural Trees provide more than predictive outputs. Their differentiable
+    tree structure makes it possible to inspect how features contribute to
+    routing decisions and how observations move toward different leaves.
+  </p>
+
+
+  <div class="interpret-grid">
+
+
+    <div class="interpret-card">
+
+      <h3>Feature Importance</h3>
+
+      <p>
+        Learned split parameters can be examined to identify which input
+        variables contribute most strongly to the Neural Tree's decisions.
+      </p>
+
+    </div>
+
+
+    <div class="interpret-card">
+
+      <h3>Split Weight Heatmaps</h3>
+
+      <p>
+        Split weights show how different features influence the internal
+        routing nodes of the differentiable tree.
+      </p>
+
+    </div>
+
+
+    <div class="interpret-card">
+
+      <h3>Leaf Probabilities</h3>
+
+      <p>
+        Soft routing creates probabilities over leaves rather than forcing
+        observations into a single branch immediately.
+      </p>
+
+    </div>
+
+
+    <div class="interpret-card">
+
+      <h3>Confusion Matrices</h3>
+
+      <p>
+        Classification confusion matrices help identify where models
+        correctly distinguish classes and where prediction errors remain.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINDINGS
+========================================================= -->
+
+<section>
+
+  <div class="section-label">
+    Insights
+  </div>
 
   <h2 class="section-title">
     Main Findings
   </h2>
 
 
-  <div class="findings-grid">
+  <div class="finding-list">
 
 
-    <div class="finding-card">
+    <div class="finding">
 
-      <h3>🌳 Neural Trees Are Competitive</h3>
+      <h3>
+        🌳 Neural Trees Provide a Differentiable Tree Architecture
+      </h3>
 
       <p>
-        Neural Tree methods demonstrated meaningful predictive ability,
-        particularly on classification problems, while retaining a
-        differentiable tree structure.
+        Soft routing allows tree decisions to be optimized through gradient
+        descent while retaining recognizable split and leaf structures.
       </p>
 
     </div>
 
 
-    <div class="finding-card">
+    <div class="finding">
 
-      <h3>🚀 Boosting Helps</h3>
+      <h3>
+        🚀 Boosting Often Improves a Single Neural Tree
+      </h3>
 
       <p>
-        Joint and Greedy Neural Boosting frequently improved upon the
-        Single Neural Tree by increasing model capacity and combining
-        information from multiple trees.
+        Joint and Greedy Neural Boosting frequently produced stronger
+        results than the Single Neural Tree by increasing model capacity
+        and combining multiple trees.
       </p>
 
     </div>
 
 
-    <div class="finding-card">
+    <div class="finding">
 
-      <h3>📊 Classical Models Stay Strong</h3>
+      <h3>
+        📊 Classical Models Remain Strong on Tabular Data
+      </h3>
 
       <p>
-        Random Forest and Gradient Boosting remained very strong reference
-        models, particularly for regression tasks and traditional tabular
-        machine learning problems.
+        Random Forest, Gradient Boosting, and linear models remained highly
+        competitive, with classical methods achieving the best overall
+        results on most evaluated datasets.
+      </p>
+
+    </div>
+
+
+    <div class="finding">
+
+      <h3>
+        🔎 Interpretability Is an Important Neural Tree Advantage
+      </h3>
+
+      <p>
+        Feature importance, split weights, routing probabilities, and leaf
+        behavior provide useful ways to examine how Neural Trees construct
+        their predictions.
       </p>
 
     </div>
@@ -870,101 +1705,186 @@
 </section>
 
 
-<!-- MODEL COMPARISON -->
+<!-- =========================================================
+     LIMITATIONS
+========================================================= -->
 
 <section>
 
-  <div class="comparison">
+  <div class="section-label">
+    Critical Evaluation
+  </div>
 
-    <h2>
-      Model Comparison Summary
-    </h2>
+  <h2 class="section-title">
+    Limitations
+  </h2>
 
-    <p>
-      The experiments show that there is no single model that dominates
-      every dataset.
-    </p>
 
-    <p>
-      <strong>Gradient Boosting</strong> produced the strongest results for
-      Adult Income, Bank Marketing, and Student Performance.
-      <strong>Random Forest</strong> performed especially well on Iris,
-      while <strong>Logistic Regression</strong> achieved excellent results
-      on Breast Cancer WDBC.
-    </p>
+  <div class="limitation-grid">
 
-    <p>
-      Neural Trees provide a different advantage: they combine
-      <strong>tree-based reasoning with neural optimization</strong>.
-      Their soft routing structure makes it possible to train decision paths
-      using gradient descent while still examining features, split weights,
-      leaf probabilities, and model behavior.
-    </p>
+
+    <div class="limitation-card">
+
+      <h3>Regression Performance</h3>
+
+      <p>
+        Neural Tree regression performance remained weaker than the
+        strongest classical baselines, particularly on Student Performance.
+      </p>
+
+    </div>
+
+
+    <div class="limitation-card">
+
+      <h3>Hyperparameter Sensitivity</h3>
+
+      <p>
+        Neural models can be sensitive to tree depth, learning rate,
+        training duration, initialization, and ensemble size.
+      </p>
+
+    </div>
+
+
+    <div class="limitation-card">
+
+      <h3>Dataset Differences</h3>
+
+      <p>
+        The six datasets vary substantially in feature structure, sample
+        size, preprocessing requirements, and target complexity.
+      </p>
+
+    </div>
+
+
+    <div class="limitation-card">
+
+      <h3>Experimental Scope</h3>
+
+      <p>
+        The study provides a comparative implementation rather than an
+        exhaustive optimization of every Neural Tree configuration.
+      </p>
+
+    </div>
+
 
   </div>
 
 </section>
 
 
-<!-- TECHNOLOGIES -->
+<!-- =========================================================
+     CONCLUSION
+========================================================= -->
 
 <section>
 
-  <div class="section-label">Tools</div>
+  <div class="section-label">
+    Conclusion
+  </div>
+
+  <h2 class="section-title">
+    Final Interpretation
+  </h2>
+
+  <p class="section-intro">
+    The project demonstrates that differentiable Neural Trees can be
+    implemented and evaluated within the same experimental framework as
+    traditional tabular machine learning methods.
+    Classical baselines remain the strongest practical choice on several
+    of the evaluated tasks, particularly regression, but Neural Trees
+    provide a valuable research-oriented alternative that combines neural
+    optimization with transparent tree routing.
+  </p>
+
+  <br>
+
+  <p class="section-intro">
+    The boosted Neural Tree variants show that ensemble strategies can
+    improve performance over a single tree, while the model structure
+    supports interpretation through split weights, feature importance,
+    routing probabilities, and leaf predictions.
+  </p>
+
+</section>
+
+
+<!-- =========================================================
+     TECHNOLOGIES
+========================================================= -->
+
+<section>
+
+  <div class="section-label">
+    Tools
+  </div>
 
   <h2 class="section-title">
     Technologies Used
   </h2>
 
+
   <div class="tech-list">
 
-    <div class="tech">Python</div>
-    <div class="tech">PyTorch</div>
-    <div class="tech">Scikit-learn</div>
-    <div class="tech">Pandas</div>
-    <div class="tech">NumPy</div>
-    <div class="tech">Matplotlib</div>
-    <div class="tech">Jupyter Notebook</div>
-    <div class="tech">Git</div>
-    <div class="tech">GitHub</div>
+    <span class="tech">Python</span>
+
+    <span class="tech">PyTorch</span>
+
+    <span class="tech">Scikit-learn</span>
+
+    <span class="tech">Pandas</span>
+
+    <span class="tech">NumPy</span>
+
+    <span class="tech">Matplotlib</span>
+
+    <span class="tech">Jupyter Notebook</span>
+
+    <span class="tech">Git</span>
+
+    <span class="tech">GitHub</span>
 
   </div>
 
 </section>
 
 
-<!-- FULL PROJECT -->
+<!-- =========================================================
+     PROJECT LINKS
+========================================================= -->
 
 <section>
 
-  <div class="project-links">
+  <div class="project-cta">
 
     <h2>
       Explore the Full Project
     </h2>
 
     <p>
-      View the complete analysis for model implementation, preprocessing,
-      experimental results, feature importance, confusion matrices,
-      Neural Tree diagnostics, and final conclusions.
+      Explore the notebook and GitHub repository for the complete
+      implementation, data preprocessing, Neural Tree architecture,
+      model training, evaluation, diagnostics, interpretability analysis,
+      and conclusions.
     </p>
+
 
     <div class="hero-buttons">
 
-      <a class="btn btn-primary"
-         href="Neural_Trees.html">
-         Open Full Analysis
+      <a
+        class="btn btn-primary"
+        href="Neural_Trees.ipynb">
+        Open Notebook
       </a>
 
-      <a class="btn btn-secondary"
-         href="Neural_Trees.ipynb">
-         Open Notebook
-      </a>
-
-      <a class="btn btn-secondary"
-         href="https://github.com/ayaa137/Neural-Trees-Data-Mining"
-         target="_blank">
-         GitHub Repository
+      <a
+        class="btn btn-secondary"
+        href="https://github.com/ayaa137/Neural-Trees-Data-Mining"
+        target="_blank">
+        GitHub Repository
       </a>
 
     </div>
@@ -977,18 +1897,25 @@
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
   <div class="container">
 
-    Created by
     <strong>Aya Abdine</strong>
-    &
+    ·
     <strong>Meriam El Askri</strong>
 
-    · Neural Trees: Data Mining Project
+    <br>
+
+    Neural Trees: Data Mining Project
+
+    <br>
+
+    MSc Data Science for Society and Business · Constructor University
 
   </div>
 
