@@ -200,6 +200,12 @@ Increasing tree depth therefore does not improve performance on Iris. A shallow 
     ├── LICENSE
     └── .gitignore
 
+## 🌐 Project Website
+
+Explore the interactive project portfolio, key results, model comparisons, and full analysis:
+
+👉 **[View the Neural Trees Project Website](https://ayaa137.github.io/Neural-Trees-Data-Mining/)**
+
 ## 📓 Full Analysis
 
 The complete analysis is available in:
